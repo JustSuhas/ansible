@@ -1,0 +1,9 @@
+- name: Variables from files
+  hosts: local
+  connection: local
+  vars_files:
+    - var_file.yaml
+  tasks:
+  - name: print from var_file
+    ansible.builtin.debug:
+      msg: "Course name is: {{ course }}, by trainer: {{ Trainer }}"
