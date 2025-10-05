@@ -1,0 +1,8 @@
+- name: gathering facts
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: gathering all the facts of ansible
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}" #default variable which has all the facts/variables
