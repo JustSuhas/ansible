@@ -1,0 +1,17 @@
+- name: Datatypes
+  hosts: local
+  connection: local
+  vars:
+    str: "String obv"
+    num: "Num obviously"
+    is_live: true 
+    tools: ["ansible", "AWS", "linux fedora"]
+    concepts:
+      cloud: AWS
+      cm: ansible
+      ops: git
+  
+  tasks:
+    - name: Printing prac session
+      ansible.builtin.debug:
+        msg: "String is : {{ str }}, Number is {{ num }}, tools which are being used: {{ tools }}, Concepts which are being learnt: {{ concepts }}"
